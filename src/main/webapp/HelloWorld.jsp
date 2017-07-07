@@ -10,5 +10,9 @@
 <body>
  <h2><s:property value="messageStore.message" /></h2>
  <p>I send you <s:property value="helloCount" /> kisses.</p>
+ 
+ <p><a href="<s:url action="helloSweety">
+		<s:param name="userName">Maddy</s:param>
+	</s:url>">Send me another kiss!</a></p>
 </body>
 </html>

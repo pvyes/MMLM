@@ -9,10 +9,12 @@
 	<h2>Hello World!</h2>
 	<p><a href="<s:url action='hello'/>">Hello World</a></p>
 	
-	<s:url action="helloSweety" var="helloSweetyLink">
+<!--	<s:url action="helloSweety" var="helloSweetyLink">
 		<s:param name="userName">Maddy</s:param>
 	</s:url>
-	<p><a href="${helloSweetyLink}">Hello Sweety</a></p>
+-->	<p><a href="<s:url action="helloSweety">
+		<s:param name="userName">Maddy</s:param>
+	</s:url>">Hello Sweety</a></p>
 		
 	<p>Put your name to get a personal hello.</p> 
 	<s:form action="helloUser"> 

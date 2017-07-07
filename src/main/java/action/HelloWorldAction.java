@@ -9,9 +9,13 @@ public class HelloWorldAction extends ActionSupport {
     
     private MessageStore messageStore;
     private static int helloCount = 0;
+    private String userName;
      
     public String execute() throws Exception {        
         messageStore = new MessageStore() ;
+        if (userName != null) {
+            messageStore.setMessage("Hello " + userName);
+        }
         helloCount++;
         return SUCCESS;
     }
@@ -37,5 +41,13 @@ public class HelloWorldAction extends ActionSupport {
  
     public void setHelloCount(int helloCount) {
         HelloWorldAction.helloCount = helloCount;
+    }
+    
+    public String getUserName() {
+    	return userName;
+    }
+    
+    public void setUserName(String userName) {
+    	this.userName = userName;
     }
  }
